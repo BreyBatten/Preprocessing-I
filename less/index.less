@@ -53,6 +53,7 @@ table {
 	box-sizing: border-box;
 }
 
+@phone-color: rgb(0, 225, 225);
 html, body {
 	max-width: 1000px;
 	height: 100%;
@@ -79,90 +80,91 @@ html, body {
 			flex-wrap: wrap;
 			.center;
 			width: 100%;
+			color: @phone-color;
 		}
 	}
-}
 
-header nav {
-	width: 70%;
-	display: flex;
-	justify-content: flex-end;
-	a {
-		margin-right: 10%;
-		text-decoration: none;
+	header nav {
+		width: 70%;
 		display: flex;
-		justify-content: space-around;
-		font-size: 2rem;
-		color: darkgray;
-		@media(max-width: 500px) {
-			width: 100%;
-			padding-top: 10px;
-			flex-direction: column;
-			border-bottom: 1px dashed gray;
-			align-items: center;
+		justify-content: flex-end;
+		a {
+			margin-right: 10%;
+			text-decoration: none;
+			display: flex;
+			justify-content: space-around;
+			font-size: 2rem;
+			color: darkgray;
+			@media(max-width: 500px) {
+				width: 100%;
+				padding-top: 10px;
+				flex-direction: column;
+				border-bottom: 1px dashed gray;
+				align-items: center;			
+			}
 		}
 	}
-}
 
-header div h1 {
-	display: flex;
-	justify-content: flex-start;
-	font-size: 3.6rem;
-}
-
-div.intro {
-	h2 {
-		.center;
-		padding-bottom: 30px;
-		font-size: 3rem;
+	header div h1 {
+		display: flex;
+		justify-content: flex-start;
+		font-size: 3.6rem;
 	}
-	p {
-		.center;
-		font-size: 2rem;
-		padding-bottom: 40px;
-	}
-}
 
-hr {
-	width: 100%;
-}
-
-.my-skills, .contact {
-	width: 100%;
-	padding-top: 10px;
-	padding-bottom: 20px;
-	flex-direction: column;
+	div.intro {
 		h2 {
-		font-size: 2rem;
-		padding-bottom: 5px;
+			.center;
+			padding-bottom: 30px;
+			font-size: 3rem;
+		}
+		p {
+			.center;
+			font-size: 2rem;
+			padding-bottom: 40px;
+		}
 	}
-	@media(max-width: 500px) {
-		.center;
-	}
-}
 
-.work-history {
-	padding-bottom: 20px;
-	justify-content: flex-start;
-	h2 {
-		font-size: 2rem;
-		padding-bottom: 5px;
-	}
-	@media(max-width: 500px) {
-		.center;
+	hr {
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
 	}
-}
 
-.contact {
-	width: 100%;
-	.center;
-	flex-direction: column;
+	.my-skills, .contact {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 30px;
+		flex-direction: column;
+		h2 {
+			font-size: 2rem;
+			padding-bottom: 5px;
+		}
+		@media(max-width: 500px) {
+			.center;
+		}
+	}
+
+	.work-history {
+		padding-bottom: 20px;
+		width: 100%;
+		h2 {
+			font-size: 2rem;
+			padding-bottom: 5px;
+		}
+		@media(max-width: 500px) {
+			.center;
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+		}
+	}
+
+	.contact {
+		width: 100%;
+		.center;
+		flex-direction: column;
 		.contact h2 {
-		font-size: 2rem;
+			font-size: 2rem;
+		}
 	}
 }
 

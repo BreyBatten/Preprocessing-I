@@ -160,14 +160,15 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
+    color: #00e1e1;
   }
 }
-header nav {
+.container header nav {
   width: 70%;
   display: flex;
   justify-content: flex-end;
 }
-header nav a {
+.container header nav a {
   margin-right: 10%;
   text-decoration: none;
   display: flex;
@@ -176,7 +177,7 @@ header nav a {
   color: darkgray;
 }
 @media (max-width: 500px) {
-  header nav a {
+  .container header nav a {
     width: 100%;
     padding-top: 10px;
     flex-direction: column;
@@ -184,58 +185,58 @@ header nav a {
     align-items: center;
   }
 }
-header div h1 {
+.container header div h1 {
   display: flex;
   justify-content: flex-start;
   font-size: 3.6rem;
 }
-div.intro h2 {
+.container div.intro h2 {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
   font-size: 3rem;
 }
-div.intro p {
+.container div.intro p {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
   padding-bottom: 40px;
 }
-hr {
+.container hr {
   width: 100%;
 }
-.my-skills,
-.contact {
+.container .my-skills,
+.container .contact {
   width: 100%;
   padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   flex-direction: column;
 }
-.my-skills h2,
-.contact h2 {
+.container .my-skills h2,
+.container .contact h2 {
   font-size: 2rem;
   padding-bottom: 5px;
 }
 @media (max-width: 500px) {
-  .my-skills,
-  .contact {
+  .container .my-skills,
+  .container .contact {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-.work-history {
+.container .work-history {
   padding-bottom: 20px;
-  justify-content: flex-start;
+  width: 100%;
 }
-.work-history h2 {
+.container .work-history h2 {
   font-size: 2rem;
   padding-bottom: 5px;
 }
 @media (max-width: 500px) {
-  .work-history {
+  .container .work-history {
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -244,13 +245,13 @@ hr {
     flex-direction: column;
   }
 }
-.contact {
+.container .contact {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.contact .contact h2 {
+.container .contact .contact h2 {
   font-size: 2rem;
 }
