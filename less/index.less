@@ -51,8 +51,9 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	
 }
+
+@primary-color: red;
 
 html, body {
 	max-width: 1000px;
@@ -68,13 +69,19 @@ html, body {
 	line-height: 1.4;
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.container header {
-	width: 100%;
-	padding: 40px 0px;
-	display: flex;
-	justify-content: space-evenly;
+	
+	header {
+		width: 100%;
+		padding: 40px 0px;
+		display: flex;
+		justify-content: space-evenly;
+		@media(max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100%;
+		}
+	}
 }
 
 .container header h1, header nav {
@@ -85,19 +92,26 @@ header nav {
 	width: 80%;
 	display: flex;
 	justify-content: flex-end;
+
 }
 
-header div h1 {
-	display: flex;
-	justify-content: flex-start;
-}
-
-header nav a {
+nav a {
 	margin-right: 10%;
 	text-decoration: none;
 	display: flex;
 	justify-content: space-around;
 	font-size: 2rem;
+	color: darkgray;
+	@media(max-width: 500px) {
+		padding-top: 10px;
+		justify-content: center;
+		border-bottom: 1px dashed gray;
+	}
+}
+
+header div h1 {
+	display: flex;
+	justify-content: flex-start;
 }
 
 .container header h1 {
@@ -113,18 +127,42 @@ div.intro h2 {
 .intro p {
 	.center;
 	font-size: 2rem;
+	padding-bottom: 40px;
 }
 
+hr {
+	width: 100%;
+}
 
+.my-skills, .contact {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	flex-direction: column;
+		.my-skills h2, .work-history h2 {
+		font-size: 2rem;
+		padding-bottom: 5px;
+	}
+}
 
+.work-history {
+	padding-bottom: 20px;
+}
 
-
-
-
-
+.contact {
+	width: 100%;
+	.center;
+	flex-direction: column;
+		.contact h2 {
+		font-size: 2rem;
+	}
+}
 
 .center() {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
+
+

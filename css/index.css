@@ -151,6 +151,14 @@ body {
   display: flex;
   justify-content: space-evenly;
 }
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
 .container header h1,
 header nav {
   justify-content: center;
@@ -160,16 +168,24 @@ header nav {
   display: flex;
   justify-content: flex-end;
 }
-header div h1 {
-  display: flex;
-  justify-content: flex-start;
-}
-header nav a {
+nav a {
   margin-right: 10%;
   text-decoration: none;
   display: flex;
   justify-content: space-around;
   font-size: 2rem;
+  color: darkgray;
+}
+@media (max-width: 500px) {
+  nav a {
+    padding-top: 10px;
+    justify-content: center;
+    border-bottom: 1px dashed gray;
+  }
+}
+header div h1 {
+  display: flex;
+  justify-content: flex-start;
 }
 .container header h1 {
   font-size: 3.6rem;
@@ -185,5 +201,36 @@ div.intro h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 2rem;
+  padding-bottom: 40px;
+}
+hr {
+  width: 100%;
+}
+.my-skills,
+.contact {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  flex-direction: column;
+}
+.my-skills .my-skills h2,
+.contact .my-skills h2,
+.my-skills .work-history h2,
+.contact .work-history h2 {
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+.work-history {
+  padding-bottom: 20px;
+}
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact .contact h2 {
   font-size: 2rem;
 }
