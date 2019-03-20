@@ -144,6 +144,7 @@ body {
   line-height: 1.4;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .container header {
   width: 100%;
@@ -153,22 +154,20 @@ body {
 }
 @media (max-width: 500px) {
   .container header {
-    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
 }
-.container header h1,
 header nav {
-  justify-content: center;
-}
-header nav {
-  width: 80%;
+  width: 70%;
   display: flex;
   justify-content: flex-end;
 }
-nav a {
+header nav a {
   margin-right: 10%;
   text-decoration: none;
   display: flex;
@@ -177,17 +176,17 @@ nav a {
   color: darkgray;
 }
 @media (max-width: 500px) {
-  nav a {
+  header nav a {
+    width: 100%;
     padding-top: 10px;
-    justify-content: center;
+    flex-direction: column;
     border-bottom: 1px dashed gray;
+    align-items: center;
   }
 }
 header div h1 {
   display: flex;
   justify-content: flex-start;
-}
-.container header h1 {
   font-size: 3.6rem;
 }
 div.intro h2 {
@@ -197,7 +196,7 @@ div.intro h2 {
   padding-bottom: 30px;
   font-size: 3rem;
 }
-.intro p {
+div.intro p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,15 +213,36 @@ hr {
   padding-bottom: 20px;
   flex-direction: column;
 }
-.my-skills .my-skills h2,
-.contact .my-skills h2,
-.my-skills .work-history h2,
-.contact .work-history h2 {
+.my-skills h2,
+.contact h2 {
   font-size: 2rem;
   padding-bottom: 5px;
 }
+@media (max-width: 500px) {
+  .my-skills,
+  .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .work-history {
   padding-bottom: 20px;
+  justify-content: flex-start;
+}
+.work-history h2 {
+  font-size: 2rem;
+  padding-bottom: 5px;
+}
+@media (max-width: 500px) {
+  .work-history {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
 .contact {
   width: 100%;

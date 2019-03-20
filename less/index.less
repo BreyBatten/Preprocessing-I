@@ -53,8 +53,6 @@ table {
 	box-sizing: border-box;
 }
 
-@primary-color: red;
-
 html, body {
 	max-width: 1000px;
 	height: 100%;
@@ -69,7 +67,7 @@ html, body {
 	line-height: 1.4;
 	display: flex;
 	flex-wrap: wrap;
-	
+	justify-content: center;
 	header {
 		width: 100%;
 		padding: 40px 0px;
@@ -79,55 +77,50 @@ html, body {
 			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
+			.center;
 			width: 100%;
 		}
 	}
 }
 
-.container header h1, header nav {
-	justify-content: center;
-}
-
 header nav {
-	width: 80%;
+	width: 70%;
 	display: flex;
 	justify-content: flex-end;
-
-}
-
-nav a {
-	margin-right: 10%;
-	text-decoration: none;
-	display: flex;
-	justify-content: space-around;
-	font-size: 2rem;
-	color: darkgray;
-	@media(max-width: 500px) {
-		padding-top: 10px;
-		justify-content: center;
-		border-bottom: 1px dashed gray;
+	a {
+		margin-right: 10%;
+		text-decoration: none;
+		display: flex;
+		justify-content: space-around;
+		font-size: 2rem;
+		color: darkgray;
+		@media(max-width: 500px) {
+			width: 100%;
+			padding-top: 10px;
+			flex-direction: column;
+			border-bottom: 1px dashed gray;
+			align-items: center;
+		}
 	}
 }
 
 header div h1 {
 	display: flex;
 	justify-content: flex-start;
-}
-
-.container header h1 {
 	font-size: 3.6rem;
 }
 
-div.intro h2 {
-	.center;
-	padding-bottom: 30px;
-	font-size: 3rem;
-}
-
-.intro p {
-	.center;
-	font-size: 2rem;
-	padding-bottom: 40px;
+div.intro {
+	h2 {
+		.center;
+		padding-bottom: 30px;
+		font-size: 3rem;
+	}
+	p {
+		.center;
+		font-size: 2rem;
+		padding-bottom: 40px;
+	}
 }
 
 hr {
@@ -139,14 +132,29 @@ hr {
 	padding-top: 10px;
 	padding-bottom: 20px;
 	flex-direction: column;
-		.my-skills h2, .work-history h2 {
+		h2 {
 		font-size: 2rem;
 		padding-bottom: 5px;
+	}
+	@media(max-width: 500px) {
+		.center;
 	}
 }
 
 .work-history {
 	padding-bottom: 20px;
+	justify-content: flex-start;
+	h2 {
+		font-size: 2rem;
+		padding-bottom: 5px;
+	}
+	@media(max-width: 500px) {
+		.center;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
 }
 
 .contact {
@@ -163,6 +171,3 @@ hr {
 	justify-content: center;
 	align-items: center;
 }
-
-
-
